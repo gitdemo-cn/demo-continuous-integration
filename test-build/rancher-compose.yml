@@ -1,0 +1,10 @@
+redis:
+  scale: 1
+pyapp:
+  upgrade_strategy:
+    start_first: true
+  scale: 2
+pyapplb:
+  scale: 1
+  load_balancer_config:
+  name: pyapplb config
