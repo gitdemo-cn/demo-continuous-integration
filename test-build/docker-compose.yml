@@ -1,5 +1,5 @@
 redis:
-  retart: always
+  restart: always
   tty: true
   image: rancherapps.com:5000/redis
   stdin_open: true
