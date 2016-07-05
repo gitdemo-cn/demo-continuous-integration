@@ -1,9 +1,13 @@
 redis:
+  labels:
+    io.rancher.scheduler.affinity:host_label: cloud=aliyun
   restart: always
   tty: true
   image: rancherapps.com:5000/redis
   stdin_open: true
 pyapp:
+  labels:
+    io.rancher.scheduler.affinity:host_label: cloud=aliyun
   restart: always
   tty: true
   image: rancherapps.com:5000/python-redis-demo:b$$BUILD_NUMBER$$
@@ -11,6 +15,8 @@ pyapp:
    - 'redis:'
   stdin_open: true
 pyapplb:
+  labels:
+    io.rancher.scheduler.affinity:host_label: cloud=aliyun
   ports:
    - $$PORT_NUMBER$$:5000
   restart: always
