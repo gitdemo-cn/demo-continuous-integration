@@ -18,7 +18,7 @@ pyapplb:
   labels:
     io.rancher.scheduler.affinity:host_label: cloud=aliyun
   ports:
-   - 5000:5000
+   - $$PORT_NUMBER$$:5000
   restart: always
   tty: true
   image: rancher/load-balancer-service
